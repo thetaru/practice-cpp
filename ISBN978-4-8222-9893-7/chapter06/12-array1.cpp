@@ -19,6 +19,7 @@ int main()
 
     for (auto& i : a) i *= 2;
 
-    for (size_t i = 0; i < 5; i++) cout << a[i] << ", ";
+    // for (size_t i = 0; i < 5; i++) cout << a[i] << ", ";
+    for (size_t i = 0; i < sizeof(a)/sizeof(int); i++) cout << a[i] << ", ";
     cout << endl;
 }

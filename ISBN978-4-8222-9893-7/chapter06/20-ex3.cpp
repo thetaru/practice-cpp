@@ -1,4 +1,5 @@
 #include <iostream>
+#include <algorithm>
 using namespace std;
 
 // void myReverse(int* first, int* last)
@@ -17,9 +18,7 @@ void myReverse(T first, T last)
 {
     while (first < last) {
         --last;
-        auto tmp = *last;
-        *last = *first;
-        *first = tmp;
+        swap(*first, *last);
         ++first;
     }
 }
