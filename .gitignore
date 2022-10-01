@@ -1,14 +1,19 @@
 # Ignore all
 *
 
-# Unignore all with exntensions
+# Unignore all files with exntensions
 !*.*
 
 # Unignore all dirs
 !*/
 
-# Ignore specific extensions
+# Unignore specific files without extensions
+!.gitignore
+!Dockerfile
+
+# Ignore specific files with extensions
 *.out
+*.txt
 
 # Ignore specific dirs
 .devcontainer/
