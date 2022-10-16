@@ -7,6 +7,7 @@ int main()
 {
     vector<int> v = { 503, 87, 512, 61, 908, 170, 897, 275, 200, 426 };
 
+    // 二分探索のために並び替え
     sort(v.begin(), v.end());
 
     auto begin = v.cbegin();
