@@ -1,6 +1,5 @@
 #include <iostream>
 #include <vector>
-using namespace std;
 
 class Bicycle
 { };
@@ -22,7 +21,9 @@ public:
         std::vector<Bicycle> newBicycles,
         std::vector<Customer> newCustomers,
         Vehicle newVehicle
-    );
+    )
+        : bicycles(newBicycles), customers(newCustomers), vehicle(newVehicle)
+    { }
 
     std::vector<Customer> getCustomers()
     {
@@ -56,22 +57,18 @@ private:
     void prepare_bicycle(Bicycle bicycle)
     { }
 
-    void prepare_bicycles(std::vector<Bicycle> bicyles)
+    void prepare_bicycles(std::vector<Bicycle> bicycles)
     {
-        for (auto bicycle = bicyles.cbegin(); bicycle != bicyles.cend(); ++bicycle)
+        for (auto bicycle = bicycles.cbegin(); bicycle != bicycles.cend(); ++bicycle)
         {
             prepare_bicycle(*bicycle);
         }
     }
 public:
-    void prepare_trip(Trip trip)
+    void prepare_trip(Trip* trip)
     {
-        std::vector<Bicycle> bicycles = trip.getBicycles();
-        for (auto bicycle = bicycles.cbegin(); bicycle != bicycles.cend(); ++bicycle)
-        {
-            prepare_bicycle(*bicycle);
-        }
-
+        std::vector<Bicycle> bicycles = trip->getBicycles();
+        prepare_bicycles(bicycles);
     }
 };
 
@@ -81,9 +78,9 @@ private:
     void buy_food(std::vector<Customer> customers)
     { }
 public:
-    void prepare_trip(Trip trip)
+    void prepare_trip(Trip* trip)
     {
-        buy_food(trip.getCustomers());
+        buy_food(trip->getCustomers());
     }
 };
 
@@ -96,9 +93,9 @@ private:
     void fill_water_tank(Vehicle vehicle)
     { }
 public:
-    void prepare_trip(Trip trip)
+    void prepare_trip(Trip* trip)
     {
-        Vehicle vehicle = trip.getVehicle();
+        Vehicle vehicle = trip->getVehicle();
         gas_up(vehicle);
         fill_water_tank(vehicle);
     }
