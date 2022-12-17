@@ -11,7 +11,7 @@ public:
 
     bool hasNext() override;
 
-    Book next() override ;
+    Book next() override;
 
 private:
     BookShelf *m_bookShelf;

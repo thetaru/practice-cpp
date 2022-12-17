@@ -9,11 +9,11 @@ class Iterator
 public:
     Iterator(){ };
 
+    virtual ~Iterator(){ };
+
     virtual bool hasNext() = 0;
 
     virtual E next() = 0;
-
-    virtual ~Iterator(){ };
 };
 
 #endif // ITERATOR
