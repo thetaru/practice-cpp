@@ -12,6 +12,7 @@
 !Dockerfile
 
 # Ignore specific files with extensions
+*.o
 *.out
 *.txt
 
