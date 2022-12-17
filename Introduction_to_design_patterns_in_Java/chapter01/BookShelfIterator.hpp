@@ -1,13 +1,10 @@
 #ifndef BOOKSHELFITERATOR_H
 #define BOOKSHELFITERATOR_H
 
-#include "Iterator.hpp"
 #include "BookShelf.hpp"
+#include "Iterator.hpp"
 
-//class BookShelf;
-class Book;
-
-class BookShelfIterator : public Iterator
+class BookShelfIterator : public Iterator<Book>
 {
 public:
     BookShelfIterator(BookShelf* bookShelf);
@@ -20,4 +17,5 @@ private:
     BookShelf *m_bookShelf;
     int m_index;
 };
+
 #endif // BOOKSHELFITERATOR_H

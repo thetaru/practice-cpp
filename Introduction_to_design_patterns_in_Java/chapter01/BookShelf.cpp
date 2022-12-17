@@ -1,5 +1,4 @@
 #include "BookShelf.hpp"
-#include "Book.hpp"
 #include "BookShelfIterator.hpp"
 
 BookShelf::BookShelf(int maxsize)
@@ -24,7 +23,7 @@ int BookShelf::getLength()
     return m_last;
 }
 
-Iterator* BookShelf::iterator()
+Iterator<Book>* BookShelf::iterator()
 {
     return new BookShelfIterator(this);
 }

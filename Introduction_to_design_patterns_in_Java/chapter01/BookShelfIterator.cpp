@@ -1,6 +1,5 @@
-#include "BookShelfIterator.hpp"
 #include "BookShelf.hpp"
-#include "Book.hpp"
+#include "BookShelfIterator.hpp"
 
 BookShelfIterator::BookShelfIterator(BookShelf *bookShelf)
 {
@@ -10,7 +9,8 @@ BookShelfIterator::BookShelfIterator(BookShelf *bookShelf)
 
 bool BookShelfIterator::hasNext()
 {
-    if (m_index < m_bookShelf->getLength()){
+    if (m_index < m_bookShelf->getLength())
+    {
         return true;
     }
     else

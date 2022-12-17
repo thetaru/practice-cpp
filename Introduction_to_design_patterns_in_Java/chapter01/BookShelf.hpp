@@ -2,12 +2,10 @@
 #define BOOKSHELF_H
 
 #include <memory>
+#include "Book.hpp"
 #include "Iterable.hpp"
 
-class Book;
-class Iterator;
-
-class BookShelf : public Iterable
+class BookShelf : public Iterable<Book>
 {
 public:
     BookShelf(int maxsize);
@@ -18,7 +16,7 @@ public:
 
     int getLength();
 
-    Iterator* iterator();
+    Iterator<Book>* iterator();
 
 private:
     std::unique_ptr<Book[]> m_books;

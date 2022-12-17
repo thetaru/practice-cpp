@@ -1,7 +1,5 @@
 #include <iostream>
 #include "BookShelf.hpp"
-#include "Book.hpp"
-#include "BookShelfIterator.hpp"
 
 int main(void)
 {
@@ -11,7 +9,7 @@ int main(void)
     bookShelf.appendBook(Book("Cinderella"));
     bookShelf.appendBook(Book("Daddy-Long-Legs"));
 
-    Iterator *it = bookShelf.iterator();
+    Iterator<Book> *it = bookShelf.iterator();
 
     while(it->hasNext())
     {

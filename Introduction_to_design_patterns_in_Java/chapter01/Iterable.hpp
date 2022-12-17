@@ -1,13 +1,15 @@
 #ifndef ITERABLE_H
 #define ITERABLE_H
 
-class Iterator;
+#include "Iterator.hpp"
 
+template <typename E>
 class Iterable
 {
 public:
-    virtual Iterator* iterator() = 0;
+    virtual Iterator<E>* iterator() = 0;
 
-    virtual ~Iterable(){};
+    virtual ~Iterable(){ };
 };
+
 #endif // ITERABLE_H

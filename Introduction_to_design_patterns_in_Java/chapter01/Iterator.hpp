@@ -1,17 +1,19 @@
 #ifndef ITERATOR_H
 #define ITERATOR_H
 
-class Book;
+#include "Book.hpp"
 
+template <typename E>
 class Iterator
 {
 public:
-    Iterator(){};
+    Iterator(){ };
 
     virtual bool hasNext() = 0;
 
-    virtual Book next() = 0;
+    virtual E next() = 0;
 
-    virtual ~Iterator(){};
+    virtual ~Iterator(){ };
 };
+
 #endif // ITERATOR
