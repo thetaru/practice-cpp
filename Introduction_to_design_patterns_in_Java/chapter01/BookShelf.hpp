@@ -2,6 +2,7 @@
 #define BOOKSHELF_H
 
 #include <memory>
+#include <vector>
 #include "Book.hpp"
 #include "Iterable.hpp"
 
@@ -19,8 +20,7 @@ public:
     Iterator<Book>* iterator();
 
 private:
-    std::unique_ptr<Book[]> m_books;
-    int m_last;
+    std::vector<Book> m_books;
 };
 
 #endif // BOOKSHELF_H

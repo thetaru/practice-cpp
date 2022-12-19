@@ -3,24 +3,23 @@
 
 BookShelf::BookShelf(int maxsize)
 {
-    m_books = std::make_unique<Book[]>(maxsize);
-    m_last = 0;
+    // Allocation of vector space
+    m_books.reserve(maxsize);
 }
 
 Book BookShelf::getBookAt(int index)
 {
-    return m_books[index];
+    return m_books.at(index);
 }
 
 void BookShelf::appendBook(Book book)
 {
-    m_books[m_last] = book;
-    m_last++;
+    m_books.push_back(book);
 }
 
 int BookShelf::getLength()
 {
-    return m_last;
+    return m_books.size();
 }
 
 Iterator<Book>* BookShelf::iterator()

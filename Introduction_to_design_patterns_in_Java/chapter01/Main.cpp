@@ -8,6 +8,10 @@ int main(void)
     bookShelf.appendBook(Book("Bible"));
     bookShelf.appendBook(Book("Cinderella"));
     bookShelf.appendBook(Book("Daddy-Long-Legs"));
+    bookShelf.appendBook(Book("East of Eden"));
+    bookShelf.appendBook(Book("Frankenstein"));
+    bookShelf.appendBook(Book("Gulliver's Travels"));
+    bookShelf.appendBook(Book("Hamlet"));
 
     Iterator<Book>* it = bookShelf.iterator();
 
