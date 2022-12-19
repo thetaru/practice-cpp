@@ -8,7 +8,7 @@
 class BookShelf : public Iterable<Book>
 {
 public:
-    BookShelf(int maxsize);
+    explicit BookShelf(int maxsize);
 
     Book getBookAt(int index);
 

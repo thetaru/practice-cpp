@@ -8,7 +8,7 @@ class Book
 public:
     Book();
 
-    Book(const std::string& name);
+    explicit Book(const std::string& name);
 
     std::string getName();
 

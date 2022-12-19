@@ -7,7 +7,7 @@
 class BookShelfIterator : public Iterator<Book>
 {
 public:
-    BookShelfIterator(BookShelf* bookShelf);
+    explicit BookShelfIterator(BookShelf* bookShelf);
 
     bool hasNext() override;
 

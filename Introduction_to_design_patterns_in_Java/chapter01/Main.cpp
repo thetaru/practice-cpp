@@ -9,7 +9,7 @@ int main(void)
     bookShelf.appendBook(Book("Cinderella"));
     bookShelf.appendBook(Book("Daddy-Long-Legs"));
 
-    Iterator<Book> *it = bookShelf.iterator();
+    Iterator<Book>* it = bookShelf.iterator();
 
     while(it->hasNext())
     {

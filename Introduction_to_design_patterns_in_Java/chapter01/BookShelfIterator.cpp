@@ -1,7 +1,7 @@
 #include "BookShelf.hpp"
 #include "BookShelfIterator.hpp"
 
-BookShelfIterator::BookShelfIterator(BookShelf *bookShelf)
+BookShelfIterator::BookShelfIterator(BookShelf* bookShelf)
 {
     m_bookShelf = bookShelf;  
     m_index = 0;
@@ -22,6 +22,6 @@ bool BookShelfIterator::hasNext()
 Book BookShelfIterator::next()
 {
     Book book = m_bookShelf->getBookAt(m_index);
-    m_index++;
+    ++m_index;
     return book;
 }
