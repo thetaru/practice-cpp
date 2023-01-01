@@ -14,7 +14,7 @@ public:
     Book next() override;
 
 private:
-    BookShelf *m_bookShelf;
+    BookShelf* m_bookShelf;
     int m_index;
 };
 
