@@ -7,7 +7,7 @@
 class FileProperties : public FileIO
 {
 private:
-    prop::property m_prop = prop::property();
+    prop::property m_prop;
 
 public:
     void readFromFile(const std::string& filename);
@@ -17,6 +17,8 @@ public:
     void setValue(const std::string& key, const std::string& value);
 
     std::string getValue(const std::string& key);
+
+    FileProperties();
 };
 
 #endif // FILEPROPERTIES_H

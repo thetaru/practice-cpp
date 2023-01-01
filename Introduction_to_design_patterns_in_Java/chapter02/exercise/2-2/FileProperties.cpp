@@ -1,5 +1,9 @@
 #include "FileProperties.hpp"
 
+FileProperties::FileProperties()
+    : m_prop(prop::property())
+{ }
+
 void FileProperties::readFromFile(const std::string& filename)
 {
     m_prop.loadfromfile(filename);
